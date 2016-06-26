@@ -30,6 +30,7 @@
     "gulp-postcss": "^6.1.1",
     "gulp-sourcemaps": "^1.6.0",
     "normalize-css": "^2.3.1",
+    "postcss-cssnext": "^2.6.0",
     "postcss-import": "^8.1.2",
     "reset-css": "^2.0.2011012603",
     "webpack": "^1.13.1",
