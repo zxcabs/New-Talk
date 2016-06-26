@@ -11,7 +11,7 @@ gulp.task("styles", () => {
   .pipe($.sourcemaps.init())
   .pipe($.postcss([
     require("postcss-import"),
-    require("cssnext")
+    require("postcss-cssnext")
   ]))
   .pipe($.concat("styles.css"))
   .pipe($.sourcemaps.write())
@@ -56,7 +56,7 @@ gulp.task("scripts", () => {
 gulp.task("server", () => {
   BS({
     server: true,
-    files: ["./index.html", "build/**/*"],
+    files: ["./index.html", "build/**/*", "img/**/*"],
   })
 })
 
