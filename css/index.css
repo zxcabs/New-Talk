@@ -1,0 +1,6 @@
+@import 'reset-css/reset.css';
+@import 'normalize-css';
+
+body {
+  color: black;
+}
