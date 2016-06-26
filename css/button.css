@@ -1,0 +1,18 @@
+.button {
+  width: 120px;
+  height: 34px;
+  border: 1px solid;
+  & + .button {
+    margin-left: 10px;
+  }
+  &.-transparent {
+    background-color: transparent;
+    border-color: #e6e6e6;
+    color: #999;
+  }
+  &.-primary {
+    background-color: #16a085;
+    border-color: #16a085;
+    color: #fff;
+  }
+}
