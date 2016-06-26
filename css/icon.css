@@ -1,0 +1,14 @@
+.icon {
+  background-size: contain;
+  background-position: center;
+  &.-talks {
+    background-image: url("/img/talks.svg");
+  }
+  &.-close {
+    font-size: 30px;
+    line-height: 26px;
+    text-align: center;
+    color: #d9d9d9;
+    font-weight: 100;
+  }
+}
