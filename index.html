@@ -4,9 +4,28 @@
   <meta charset="UTF-8">
   <title>New Talk</title>
   <link rel="stylesheet" href="build/styles.css">
-  <script src="build/scripts.js"></script>
+  <script src="build/scripts.js" defer></script>
 </head>
 <body>
-  <p>Hello World!!!!</p>
+  <button class="js-modals-open" data-modal="new-talk">Open</button>
+
+  <div class="modals">
+    <div class="modals-overlay js-modals-overlay -hidden">
+      <div class="modals-wrapper">
+        <div class="modal" id="modal-new-talk">
+          <div class="modal-header">
+            <span class="modal-icon icon -talks"></span>
+            <h3 class="modal-title">Новый разговор</h3>
+            <span class="modal-icon icon -close js-close-modal">&times;</span>
+          </div>
+          <div class="modal-body">Body</div>
+          <div class="modal-footer">
+            <button class="button -transparent js-modal-close">Отмена</button>
+            <button class="button -primary js-modal-next">Далее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
