@@ -1,0 +1,36 @@
+.modal {
+  width: 800px;
+  background-color: #fafafa;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100vh);
+  transition: transform 150ms ease;
+  background-color: #fff;
+  &.-shown {
+    transform: translate(-50%, -50%);
+  }
+  &-header {
+    padding: 15px;
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+  }
+  &-title {
+    color: #666;
+    font-weight: 100;
+    font-size: 18px;
+    margin: 0;
+    padding: 6px 15px;
+    flex-grow: 1;
+    white-space: nowrap;
+  }
+  &-icon {
+    width: 30px;
+    height: 30px;
+  }
+  &-footer {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+}
