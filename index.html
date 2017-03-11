@@ -7,7 +7,7 @@
   <script src="build/scripts.js" defer></script>
 </head>
 <body>
-  <button class="js-modals-open" data-modal="new-talk">Open</button>
+  <button class="js-modal-open" data-modal="new-talk">Open</button>
 
   <div class="modals">
     <div class="modals-overlay js-modals-overlay -hidden">
@@ -16,9 +16,52 @@
           <div class="modal-header">
             <span class="modal-icon icon -talks"></span>
             <h3 class="modal-title">Новый разговор</h3>
-            <span class="modal-icon icon -close js-close-modal">&times;</span>
+            <span class="modal-icon icon -close js-modal-close">&times;</span>
           </div>
-          <div class="modal-body">Body</div>
+          <div class="modal-body">
+            <form class="modal-form" action="">
+              <h3 class="modal-form-title">НАЗВАНИЕ РАЗГОВОРА</h3>
+              <input class="modal-form-field" type="text" name="name" value="" placeholder="Название разгово">
+              <h3 class="modal-form-title">ТИП РАЗГОВОРА</h3>
+              <select class="modal-form-select" name="talk" size="1">
+                <option value="" >1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+              </select>
+              <h3 class="modal-form-title">СВОЙСТВА РАЗГОВОРА</h3>
+                <div class="modal-form-text">
+                  <label for="conversation-delete" class="label">
+                    Запрет на удаление разговора для владельца
+                    <input id="conversation-delete" class="check" type="checkbox">
+                  </label>
+                </div>
+                <div class="modal-form-text">
+                  <label for="conversation-delete" class="label">
+                    Запрет на редактирование состава пользователей
+                    <input id="conversation-delete" class="check" type="checkbox">
+                  </label>
+                  </div>
+                <div class="modal-form-text">
+                  <label for="conversation-delete" class="label">
+                    Запрет на изменение типа разговора
+                    <input id="conversation-delete" class="check" type="checkbox">
+                  </label>
+                </div>
+                <div class="modal-form-text">
+                  <label for="conversation-delete" class="label">
+                    Запрет на создание сообщений для участников
+                    <input id="conversation-delete" class="check" type="checkbox">
+                  </label>
+                  </div>
+                <div class="modal-form-text -bottom">
+                  <label for="conversation-delete" class="label">
+                    Запрет на изменение настроек Разговора
+                    <input id="conversation-delete" class="check" type="checkbox">
+                </label>
+                </div>
+            </form>
+
+          </div>
           <div class="modal-footer">
             <button class="button -transparent js-modal-close">Отмена</button>
             <button class="button -primary js-modal-next">Далее</button>

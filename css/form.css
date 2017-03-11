@@ -1,0 +1,47 @@
+.modal-form {
+  margin: 20px;
+
+  &-title{
+    color:#1a7b5e;
+    height: 19px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px 1px;
+  }
+  &-field{
+    width: 100%;
+    height: 20px;
+    margin: 5px 0;
+    padding: 6px;
+  }
+  &-select{
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    padding: 6px;
+    font-size: 12px;
+    line-height: 1;
+  }
+  &-text{
+    height: 15px;
+    font-size: 13px;
+    font-weight: normal;
+    color: #666666;
+    border-top: 1px solid #d9d9d9;
+    /*border-bottom: 1px solid #d9d9d9;*/
+    padding: 8px 1px;
+    display: flex;
+
+    &.-bottom {
+      border-bottom: 1px solid #d9d9d9;
+    }
+  }
+}
+
+.check{
+  float: right;
+}
+
+.label{
+  width:100%;
+}
