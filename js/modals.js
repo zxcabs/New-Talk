@@ -1,31 +1,30 @@
-const openModalsButtons = [...document.querySelectorAll(".js-modal-open")]
+document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('js-modal-open')) {
+        onOpenModalButtonClickHandler(event);
+    }
+});
 
-openModalsButtons.forEach(button => {
-  button.addEventListener('click', openModal)
-})
+function onOpenModalButtonClickHandler(event) {
+    const modalsOverlay = document.querySelector(".js-modals-overlay");
+    const modalId = `#modal-${event.target.dataset.modal}`;
+    const modal = modalsOverlay.querySelector(modalId);
+    modalsOverlay.classList.remove("-hidden");
 
-function openModal(event){
-  const modalsOverlay = document.querySelector(".js-modals-overlay")
-  modalsOverlay.classList.remove("-hidden")
+    modal.addEventListener('click', function close(event) {
+        if (event.target.classList.contains('js-modal-close')) {
+            modal.removeEventListener('click', close);
+            closeModal(modal);
+            modalsOverlay.classList.add("-hidden");
+        }
+    });
 
-  const modalId = `#modal-${this.dataset.modal}`
-  const modal = modalsOverlay.querySelector(modalId)
-  console.log(modalId, modalsOverlay, modal);
-  modal.classList.add("-shown")
+    openModal(modal);
 }
 
-const closeModalsButtons = [...document.querySelectorAll(".js-modal-close")]
+function closeModal(modal) {
+    modal.classList.remove("-shown");
+}
 
-closeModalsButtons.forEach(button => {
-  button.addEventListener('click', closeModal)
-})
-
-function closeModal(event){
-  const modalsOverlay = document.querySelector(".js-modals-overlay")
-  modalsOverlay.classList.add("-hidden")
-
-  const modalId = `#modal-${this.dataset.modal}`
-  const modal = modalsOverlay.querySelector(modalId)
-  console.log(modalId, modalsOverlay, modal);
-  modal.classList.remove("-shown")
+function openModal(modal) {
+  modal.classList.add("-shown");
 }
